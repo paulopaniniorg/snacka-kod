@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: snacka-kod
+  labels:
+    app: nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: snacka-kod
+  template:
+    metadata:
+      labels:
+        app: snacka-kod
+    spec:
+      containers:
+      - name:  snacka-kod
+        image: ghcr.io/paulopaniniorg/snacka-kod:latest
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP
+      imagePullSecrets:
+      - name: github-secret
