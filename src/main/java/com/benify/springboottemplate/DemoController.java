@@ -11,4 +11,9 @@ public class DemoController {
     public String sayHello() {
         return "Hello World from snacka-kod";
     }
+
+     @GetMapping(path = "/bye")
+    public String sayBye() {
+        return "Hello World from snacka-kod";
+    }
 }
