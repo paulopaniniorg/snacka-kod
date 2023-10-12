@@ -21,9 +21,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "Log level: $LEVEL"
+          if [${{ inputs.logLevel }} == 'info] ;then "log level is info"; else "log level is not info"; fi
           echo "Tags: $TAGS"
           echo "Environment: $ENVIRONMENT"
         env:
-          LEVEL: if [${{ inputs.logLevel }} == 'info] ;then "this is info"; else "this is not info"; fi
+          LEVEL: ${{ inputs.logLevel }}
           TAGS: ${{ inputs.tags }}
