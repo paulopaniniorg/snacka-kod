@@ -16,6 +16,5 @@ jobs:
   call-workflow-passing-data:
     uses: paulopaniniorg/workflows/.github/workflows/build-and-deploy.yml@main
     with:
-      project_name: snacka-kod
       environment: ${{inputs.environment}}
     
