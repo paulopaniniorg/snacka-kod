@@ -17,3 +17,5 @@ jobs:
     uses: paulopaniniorg/workflows/.github/workflows/build-and-deploy.yml@main
     with:
       environment: ${{inputs.environment}}
+    secrets:
+      API_GITHUB_TOKEN: ${{secrets.API_GITHUB_TOKEN}}
