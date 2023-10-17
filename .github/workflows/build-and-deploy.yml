@@ -10,3 +10,5 @@ jobs:
     uses: paulopaniniorg/workflows/.github/workflows/build.yml@main
     with:
       project_name: snacka-kod
+    secrets:
+      API_GITHUB_TOKEN: ${{secrets.API_GITHUB_TOKEN}}
