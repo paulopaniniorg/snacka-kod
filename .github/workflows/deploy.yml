@@ -18,6 +18,4 @@ jobs:
     with:
       project_name: snacka-kod
       environment: ${{inputs.environment}}
-    secrets: 
-      API_GITHUB_TOKEN: $${{secrets.API_GITHUB_TOKEN}}
     
